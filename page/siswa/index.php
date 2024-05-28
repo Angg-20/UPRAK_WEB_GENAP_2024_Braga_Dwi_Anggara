@@ -1,24 +1,25 @@
-<?php include "layout/header.php"; ?>
+<?php include "../../layout/header.php"; ?>
 
-<?php include "layout/sidebar.php"; ?>
+<?php include "../../layout/sidebar.php"; ?>
 
-    <main id="main" class="main">
+<main id="main" class="main">
 
-        <div class="pagetitle">
-            <h1>Blank Page</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="index.html">Home</a></li>
-                </ol>
-            </nav>
-        </div>
+    <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </nav>
+    </div>
 
-        <section class="section">
+    <section class="section">
 
-            
 
-        </section>
 
-    </main>
+    </section>
 
-<?php include "layout/footer.php"; ?>
+</main>
+
+<?php include "../../layout/footer.php"; ?>
