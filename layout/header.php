@@ -1,14 +1,3 @@
-<?php
-session_start();
-
-include "config/database.php";
-
-if (!isset($_SESSION['user'])) {
-    header("location: /page/auth/login.php");
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,6 +57,12 @@ if (!isset($_SESSION['user'])) {
                     <h6>Ahmad</h6>
                 </li>
 
+                <li>
+                    <a class="dropdown-item d-flex align-items-center" href="/page/auth/ForgetPassword.php">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Forget Password</span>
+                    </a>
+                </li>
                 <li>
                     <a class="dropdown-item d-flex align-items-center" href="/page/auth/exit.php">
                         <i class="bi bi-box-arrow-right"></i>
