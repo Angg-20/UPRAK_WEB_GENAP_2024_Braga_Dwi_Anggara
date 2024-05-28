@@ -35,40 +35,30 @@ if (isset($_POST['login'])) {
 
 ?>
 
-<?php include "../../layout/header.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    
+<div class="login mt-5 mb-5">
+    <h2>Login</h2>
+    <form action="" method="post" name="update">
+        <input type="text" name="PasswordLama" placeholder="PasswordLama" autocomplete="off">
+        <input type="text" name="passwordBaru" placeholder="PasswordBaru" autocomplete="off">
+        <input type="text" name="VPassword" placeholder="VPassword" autocomplete="off">
+        <a href="../../index.php" class="ms-auto " style="font-size: 14px;">Back to Login</a>
+        <button type="submit" name="login">Login</button>
+        <?php if (!empty($error)) : ?>
+            <p style="color: red;"><?php echo $error; ?></p>
+        <?php endif; ?>
+    </form>
+</div>
 
-<?php include "../../layout/sidebar.php"; ?>
+</body>
+</html>
 
-<main id="main" class="main">
-
-    <div class="pagetitle">
-        <h1>Forget Password</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Forget Password</li>
-            </ol>
-        </nav>
-    </div>
-
-    <section class="section">
-
-    <div class="login mt-5 mb-5">
-        <h2>Login</h2>
-        <form action="" method="post" name="update">
-            <input type="text" name="PasswordLama" placeholder="PasswordLama" autocomplete="off">
-            <input type="text" name="passwordBaru" placeholder="PasswordBaru" autocomplete="off">
-            <input type="text" name="VPassword" placeholder="VPassword" autocomplete="off">
-            <a href="login.php" class="ms-auto " style="font-size: 14px;">Back to Login</a>
-            <button type="submit" name="login">Login</button>
-            <?php if (!empty($error)) : ?>
-                <p style="color: red;"><?php echo $error; ?></p>
-            <?php endif; ?>
-        </form>
-    </div>
-
-    </section>
-
-</main>
-
-<?php include "../../layout/footer.php"; ?>

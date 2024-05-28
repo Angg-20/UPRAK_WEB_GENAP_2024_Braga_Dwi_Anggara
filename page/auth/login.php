@@ -55,7 +55,6 @@ mysqli_close($db);
         <form action="" method="post">
             <input type="text" name="username" placeholder="Username" autocomplete="off">
             <input type="password" name="password" placeholder="Password" autocomplete="off">
-            <a href="ForgetPassword.php" class="ms-auto " style="font-size: 14px;">Foget My Password</a>
             <button type="submit" name="login">Login</button>
             <?php if (!empty($error)) : ?>
                 <p style="color: red;"><?php echo $error; ?></p>
