@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
         }
     } else {
         $error = "Password Lama tidak cocok";
-    }
+}
 }
 
 ?>
