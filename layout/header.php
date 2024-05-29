@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-include "config/database.php";
-
 if (!isset($_SESSION['user'])) {
     header("location: /page/auth/login.php");
 }
@@ -69,13 +67,13 @@ if (!isset($_SESSION['user'])) {
                 </li>
 
                 <li>
-                    <a class="dropdown-item d-flex align-items-center" href="/page/auth/ForgetPassword.php">
+                    <a class="dropdown-item d-flex align-items-center" href="./page/auth/ForgetPassword.php">
                         <i class="bi bi-box-arrow-right"></i>
                         <span>Forget Password</span>
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-item d-flex align-items-center" href="/page/auth/exit.php">
+                    <a class="dropdown-item d-flex align-items-center" href="./page/auth/exit.php">
                         <i class="bi bi-box-arrow-right"></i>
                         <span>Sign Out</span>
                     </a>
