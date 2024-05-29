@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+include "config/database.php";
+
+if (!isset($_SESSION['user'])) {
+    header("location: /page/auth/login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
