@@ -14,6 +14,12 @@
             <li class="nav-heading">Pages</li>
 
             <li class="nav-item">
+                <a class="nav-link collapsed" href="/page/siswa/index.php">
+                    <i class="bi bi-person"></i>
+                    <span>Siswa</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="/page/jurusan/index.php">
                     <i class="bi bi-person"></i>
                     <span>Jurusan</span>

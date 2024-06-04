@@ -33,12 +33,12 @@ $hasil = $db->query($sql);
 
         <div class="container">
 
-            <table class="table">
+            <table class="table table-bordered">
                 <thead>
-                    <tr class="text-center">
+                    <tr>
                         <th scope="col">#</th>
                         <th scope="col">kode kelas</th>
-                        <th scope="col">kelas</th>
+                        <th scope="col">tingkat</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>

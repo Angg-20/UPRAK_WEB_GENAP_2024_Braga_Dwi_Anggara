@@ -2,25 +2,21 @@
 
 include "../../config/database.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $kode_kelas = $_POST['kode_kelas'];
-    $tingkat = $_POST['tingkat'];
+$sql = "SELECT * FROM kelas WHERE id =" . $_GET['id'];
+$hasil = $db->query($sql);
 
-    $stmt = $db->prepare("INSERT INTO kelas (kode_kelas, tingkat) VALUES (?, ?)");
+$ang = ($hasil->fetch_assoc());
 
-    $stmt->bind_param("ss", $kode_kelas, $tingkat);
+if(isset($_POST['kode_kelas'])){
+    $ang = "UPDATE kelas SET 
+      kode_kelas = '" . $_POST['kode_kelas'] . "',
+      tingkat = '" . $_POST['tingkat'] . "'
+      WHERE id =" . $_GET['id'];
+      $db->query($ang);
 
-    if ($stmt->execute()) {
-        header("Location: index.php");
-        exit();
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
+      header('location:index.php');
 }
 
-$db->close();
 ?>
 
 <?php include "../../layout/header.php"; ?>
@@ -30,12 +26,12 @@ $db->close();
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>kelas</h1>
+        <h1>siswa</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item ">kelas</li>
-                <li class="breadcrumb-item active">Tambah</li>
+                <li class="breadcrumb-item ">siswa</li>
+                <li class="breadcrumb-item active">Update</li>
             </ol>
         </nav>
     </div>
@@ -48,15 +44,11 @@ $db->close();
                 <form action="" method="post">
                     <div class="mb-3">
                         <label for="kode_kelas" class="form-label">kode kelas</label>
-                        <input type="text" class="form-control" id="kode_kelas" name="kode_kelas" autocomplete="off">
+                        <input type="text" class="form-control" id="kode_kelas" name="kode_kelas" value="<?= $ang['kode_kelas']; ?>">
                     </div>
                     <div class="mb-3">
                         <label for="tingkat" class="form-label">tingkat</label>
-                        <select name="tingkat" id="tingkat" class="form-control">
-                            <option value="">10</option>
-                            <option value="">11</option>
-                            <option value="">12</option>
-                        </select>
+                        <input type="number" class="form-control" id="tingkat " name="tingkat" value="<?= $ang['tingkat']; ?>">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

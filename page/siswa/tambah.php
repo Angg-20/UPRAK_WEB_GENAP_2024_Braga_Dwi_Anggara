@@ -30,11 +30,11 @@ $db->close();
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>kelas</h1>
+        <h1>siswa</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item ">kelas</li>
+                <li class="breadcrumb-item ">siswa</li>
                 <li class="breadcrumb-item active">Tambah</li>
             </ol>
         </nav>

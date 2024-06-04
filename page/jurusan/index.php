@@ -33,9 +33,9 @@ $hasil = $db->query($sql);
 
         <div class="container">
 
-            <table class="table">
+            <table class="table table-bordered">
                 <thead>
-                    <tr class="text-center">
+                    <tr>
                         <th scope="col">#</th>
                         <th scope="col">Kode Jurusan</th>
                         <th scope="col">Deskripsi</th>
