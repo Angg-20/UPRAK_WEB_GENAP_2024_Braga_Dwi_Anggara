@@ -2,7 +2,7 @@
 
 include "../../config/database.php";
 
-$angga = 'DELETE FROM siswa where id =' .$_GET['id'];
+$angga = 'DELETE FROM siswa where nis =' .$_GET['nis'];
 
 $db->query($angga);
 

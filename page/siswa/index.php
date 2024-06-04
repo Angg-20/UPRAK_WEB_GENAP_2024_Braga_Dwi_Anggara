@@ -2,10 +2,14 @@
 
 include "../../config/database.php";
 
-$sql = "SELECT * FROM siswa";
+$sql = "SELECT siswa.*, kelas.kode_kelas, spp.nominal FROM siswa 
+        LEFT JOIN kelas ON siswa.kelas_id = kelas.id 
+        LEFT JOIN spp ON siswa.spp_id = spp.id";
+
 $hasil = $db->query($sql);
 
 ?>
+
 
 <?php include "../../layout/header.php"; ?>
 
@@ -53,11 +57,11 @@ $hasil = $db->query($sql);
                             <td scope="row"><?= $h['nis']; ?></td>
                             <td><?= $h['nama_lengkap']; ?></td>
                             <td><?= $h['alamat']; ?></td>
-                            <td><?= $h['kelas_id']; ?></td>
-                            <td><?= $h['spp_id']; ?></td>
+                            <td><?= $h['kode_kelas']; ?></td>
+                            <td><?= $h['nominal']; ?></td>
                             <td class="text-center">
-                                <a href="update.php?id=<?= $h['nis']; ?>" class="btn btn-primary" style="width: 100px;">Edit</a>
-                                <a href="delete.php?id=<?= $h['nis']; ?>" class="btn btn-danger" style="width: 100px;">Hapus</a>
+                                <a href="update.php?nis=<?= $h['nis']; ?>" class="btn btn-primary" style="width: 100px;">Edit</a>
+                                <a href="delete.php?nis=<?= $h['nis']; ?>" class="btn btn-danger" style="width: 100px;">Hapus</a>
                             </td>
                         </tr>
                     <?php
