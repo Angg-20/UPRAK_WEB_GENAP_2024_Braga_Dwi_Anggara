@@ -37,6 +37,12 @@
                     <span>Kelas</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/page/pembayaran/index.php">
+                    <i class="bi bi-person"></i>
+                    <span>Pembayaran</span>
+                </a>
+            </li>
 
         </ul>
 
